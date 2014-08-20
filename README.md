@@ -3,7 +3,7 @@ jpginfo
 
 PHP function to efficiently read JPG file for size and optimization info.
 
-> _Note:_ If you're looking for a function to return a JPG's compression quality setting, this is not it. That value is not defined by the JPG format specification. It _might_ be parsed from application-specific data records if creation software adds it. Other attempts to estimate compression quality by analyzing image filesize, dimensions, and data tables, might be of interest.  See http://www.hackerfactor.com/src/jpegquality.c for that.
+> _Note:_ If you're looking for a function to return a JPG's compression quality, this is not it. That value is not defined by the JPG format specification. It _might_ be parsed from application-specific data records if creation software adds it. Attempts to estimate compression quality by analyzing quantization tables might be of interest (see http://www.hackerfactor.com/src/jpegquality.c).
 
 This is an alternative to PHP's `getimagesize()` function (http://php.net/manual/en/function.getimagesize.php) which reportedly reads the entire JPG file before returning info. I needed something much faster and the ability to report the JPG's optimization type, "baseline" or "progressive", which getimagesize() does not return.
 
@@ -20,7 +20,7 @@ Usage
 mixed jpginfo ( string $filename )
 ```
 
-The `jpginfo()` function will determine the size of any given image file and return the dimensions along with the optimization type.
+The `jpginfo()` function will determine the size of a JPG image file and return the dimensions along with the optimization type.
 
 Parameters
 ----------
