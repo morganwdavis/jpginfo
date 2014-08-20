@@ -30,7 +30,7 @@ Returns `false` on error (e.g., unable to read file data, invalid JPG data marke
 
 * `height`: Height in pixels
 * `width`: Width in pixels
-* `optimization`: The optimization method as "baseline" or "progressive"
+* `progressive`: `true` for progressive optimization, `false` for baseline optimization
 * `bits`: The bit depth of the image (usually 8)
 
 
