@@ -18,11 +18,11 @@ Usage
 mixed jpginfo ( string $filename )
 ```
 
-The jpginfo() function will determine the size of any given image file and return the dimensions along with the optimization type.
+The `jpginfo()` function will determine the size of any given image file and return the dimensions along with the optimization type.
 
 Parameters
 ----------
-* filename: This parameter specifies the file you wish to retrieve information about. It can reference a local file or (configuration permitting) a remote file using one of the supported streams.
+* `filename`: This parameter specifies the file you wish to retrieve information about. It can reference a local file or (configuration permitting) a remote file using one of the supported streams.
 
 Return Values
 -------------
