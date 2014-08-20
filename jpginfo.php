@@ -7,6 +7,7 @@
  *
  * Wikipedia - JPEG: 	http://en.wikipedia.org/wiki/JPEG
  * JPEG File structure:	http://www.xbdev.net/image_formats/jpeg/tut_jpg/jpeg_file_layout.php
+ * Estimate Quality:	http://www.hackerfactor.com/src/jpegquality.c
  * 
  * @param  string $image Path to JPEG image
  * @return mixed          False on error, or
@@ -37,9 +38,9 @@ function jpginfo($image) {
 				switch ($type) {
 					case "\xC0": // SOF0 -- baseline
 					case "\xC2": // SOF2 -- progressive
-						$rec = fread($fh, 9);
+						$rec = fread($fh, 5);
 						$info = unpack('Cbits/nheight/nwidth', $rec);
-						$info['progressive'] = $type == "\xC2";
+						$info['progressive'] = ($type == "\xC2");
 						fclose($fh);
 						return $info;				
 				}
