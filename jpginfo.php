@@ -1,7 +1,12 @@
 <?php
 /**
+ * jpginfo.php
+ * 
  * Efficiently parses JPEG stream by reading minimal data in order
  * to return size and optimization info quickly.
+ * 
+ * https://github.com/morganwdavis/jpginfo
+ * Copyright (C) 2014 Morgan Davis; Licensed MIT
  *
  * See:
  *
